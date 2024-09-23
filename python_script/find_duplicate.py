@@ -1,19 +1,20 @@
-
-# Algorithm (Binary Search on the range)
+# Floyd's Tortoise and Hare algorithm
 def findDuplicate(nums):
-    low, high = 1, len(nums) - 1
+    slow_pointer = nums[0]
+    fast_pointer = nums[0]
 
-    while low < high:
-        mid = (low + high) // 2
+    while True:
+        slow_pointer = nums[slow_pointer]
+        fast_pointer = nums[nums[fast_pointer]]
+        if slow_pointer == fast_pointer:
+            break
 
-        count = sum(num <= mid for num in nums)
+    slow_pointer = nums[0]
+    while slow_pointer != fast_pointer:
+        slow_pointer = nums[slow_pointer]
+        fast_pointer = nums[fast_pointer]
 
-        if count > mid:
-            high = mid
-        else:
-            low = mid + 1
-
-    return low
+    return fast_pointer
 
 
 input_arr = [1, 3, 4, 2, 2]
