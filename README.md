@@ -9,7 +9,7 @@ This repository contains various tasks such as web scraping, data processing, an
 ## Table of Contents
 
 - [Requirements](#requirements)
-- [Dependencies:](#Dependencies:)
+- [Dependencies](#Dependencies)
 - [Setup and Installation](#setup-and-installation)
 - [Running the Project](#running-the-project)
 
